@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demographics</title>
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript"  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+    </head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+    <script type="text/javascript" src="js/draw.js"></script>
+    <div class="container">
+        <div class="row centered">
+            <div class="six columns offset-by-three alpha">
+                <h1>Bufflo's needle problem</h1>
+            </div>
+        </div>
+        <div class="row centered">
+            <div class="six columns offset-by-three alpha">
+                <p class="desc centered">Suppose we have a floor made of parallel strips of wood, each the same width, and we drop a needle onto the floor. What is the probability that the needle will lie across a line between two strips?</p>
+                <br> Given that the distance between the parrel lines is 1.
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px;">
+            <div class="two columns offset-by-four alpha">
+                <div class="row" id="length">
+                    <h3>Length of Needles L:</h3>
+                </div>
+                <div class="row" id="length">
+                    <div class="button current" data-val="1">1/2</div>
+                    <div class="button" data-val="2" style="margin-right:0">2</div>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="row" id="speed">
+                    <h3>Dropping # more needles:</h3>
+                    <div class="button current" val="1">1</div>
+                    <div class="button" val="10">10</div>
+                    <div class="button" val="100">100</div>
+                    <div class="button" val="1000">1000</div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        <div class="row" style="margin-top:20px;">
+            <div class="two columns offset-by-four alpha">
+                <div class="row">
+                    <h3>Number of needles n:</h3>
+                </div>
+                <div class="row" id="length">
+                    <p id="n">0</p>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="row" id="number">
+                    <h3>Number of crosses c:</h3>
+                    <p id="cross">0</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="margin-top:20px;">
+            
+                <div class="two columns offset-by-one alpha" id="chart1">
+    
+                </div>
+            
+            
+                <div class="four columns offset-by-four alpha" id="chart2">
+    
+                </div>
+            
+        </div>
+             
+
+
+        <div class="row ten columns offset-by-one alpha" id="length">
+            <div class="button" style="margin-right:0" onclick="reset()">reset</div>
+        </div>
+
+
+
+
+
+        <div class="row centered" style="margin-top:20px;">
+            <div class="four columns offset-by-four alpha">
+                <p class="desc">If we calculate 2L/(c/n): (c/n is the probability that the needle will lie across a line between two strips)</p>
+                <p id="pi">0</p>
+            </div>
+        </div>
+
+        <div class="row centered">
+            <div class="four columns offset-by-four alpha">
+                <p class="desc centered">&hellip;we will find that this value is &hellip; </p>
+            </div>
+        </div>
+
+        <div class="row centered" style="margin-top:20px;">
+            <div class="four columns offset-by-four alpha">
+                <p class="desc centered" id="PI">&pi; &hellip;  or a const&hellip;</p>
+            </div>
+        </div>
+
+
+
+
+
+        
+
+       
+
+
+
+        
+        <div class="row centered">
+            <div class="six columns offset-by-three alpha">
+                <p class="desc centered">Let's see mathematical proof for this phenomenon from : </p>
+                <a href="http://mathworld.wolfram.com/BuffonsNeedleProblem.html">http://mathworld.wolfram.com/BuffonsNeedleProblem.html</a>
+                <p class="desc centered">We can find that if we plug x=1/2 and x=2 into the corresponding formula, the result is what we get in the experiment. Now we have a very special way to calculate &pi; with probability!!!</p>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row centered">
+                <div class="six columns offset-by-three alpha">
+                        <img src="img/1.png"  alt="proof" />                  
+                </div>
+            </div>
+
+
+       
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
